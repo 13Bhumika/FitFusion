@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "731114581695",
+    "project_id": "fitfusion-f75f4",
+    "storage_bucket": "fitfusion-f75f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731114581695:android:f14a42291c2d19b48be00a",
+        "android_client_info": {
+          "package_name": "project.fitfusion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD41ATLQLrt-lubFm4ZwrXGIerqKQYEXmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

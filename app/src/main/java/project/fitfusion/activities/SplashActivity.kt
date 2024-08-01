@@ -11,19 +11,20 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        moveToIntroActivity()
+        goToIntroActivity()
     }
 
-    private fun moveToIntroActivity() {
+    private fun goToIntroActivity() {
         val timer = object : CountDownTimer(3000, 3000) {
-            override fun onTick(p0: Long) {}
+            override fun onTick(millisUntilFinished: Long) {
+
+            }
 
             override fun onFinish() {
                 startActivity(Intent(this@SplashActivity, IntroActivity::class.java))
                 finish()
             }
         }
-
         timer.start()
     }
 }
