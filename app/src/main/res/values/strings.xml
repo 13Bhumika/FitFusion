@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FitFusion</string>
+    <string name="fit_fusion_logo">Fit Fusion Logo</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="introduction_screen_motivation_quote">\"Strive for progress, not perfection.\"</string>
 </resources>
