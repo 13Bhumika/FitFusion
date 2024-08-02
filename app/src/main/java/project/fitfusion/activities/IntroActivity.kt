@@ -16,9 +16,10 @@ class IntroActivity : AppCompatActivity() {
 
         binding?.flSignUp?.setOnClickListener {
             startActivity(Intent(this@IntroActivity, SignUpActivity::class.java))
+
         }
         binding?.flSignIn?.setOnClickListener {
-
+            startActivity(Intent(this@IntroActivity, SignInActivity::class.java))
         }
     }
 

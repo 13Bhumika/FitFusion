@@ -8,16 +8,6 @@
     android:orientation="vertical"
     android:background="@drawable/sign_up_activity_background">
 
-    <include
-        layout="@layout/back_toolbar"
-        android:layout_width="44dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:padding="2dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></include>
-
     <TextView
         android:id="@+id/tv_sign_up"
         android:layout_width="match_parent"
@@ -25,11 +15,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="Sign Up"
+        android:text="Sign In"
         android:textColor="@color/black"
         android:textSize="28sp"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="40dp"
         android:layout_marginEnd="2dp"/>
 
     <TextView
@@ -39,7 +29,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_sign_up"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Please enter the following details to register with us"
+        android:text="Please enter the following details to sign in with us"
         android:layout_marginBottom="350dp"
         android:layout_marginStart="10dp"
         android:textSize="20sp"
@@ -61,19 +51,9 @@
             app:cardBackgroundColor="@color/white">
 
             <EditText
-                android:id="@+id/et_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Name"
-                android:textSize="18sp"
-                android:textStyle="italic"
-                android:textColor="@color/black"/>
-
-            <EditText
                 android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="45dp"
                 android:hint="Email"
                 android:textSize="18sp"
                 android:textStyle="italic"
@@ -83,7 +63,7 @@
                 android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="90dp"
+                android:layout_marginTop="45dp"
                 android:hint="Password"
                 android:textSize="18sp"
                 android:textStyle="italic"
@@ -94,8 +74,8 @@
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="200dp"
-                android:text="SIGN UP" />
+                android:layout_marginTop="150dp"
+                android:text="SIGN IN" />
 
         </androidx.cardview.widget.CardView>
 
