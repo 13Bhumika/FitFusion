@@ -11,12 +11,12 @@
         android:id="@+id/iv_intro_image"
         android:layout_width="@dimen/introduction_image_size"
         android:layout_height="@dimen/introduction_image_size"
-        android:importantForAccessibility="no"
         android:src="@drawable/ic_intro_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
 
     <ImageView
         android:layout_width="@dimen/introduction_logo_size"

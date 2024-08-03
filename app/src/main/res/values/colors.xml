@@ -10,5 +10,6 @@
     <color name="variant6">#0096C7</color>
     <color name="variant7">#0077B6</color>
     <color name="variant8">#023E8A</color>
-    <color name="variant9">#03045E</color> <!-- Darkest color -->
+    <color name="variant9">#03045E</color>
+    <color name="light_gray">#C4C4C4</color> <!-- Darkest color -->
 </resources>
