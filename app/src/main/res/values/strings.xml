@@ -9,4 +9,5 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="enter_details_sign_in">Please enter the following details to sign in</string>
+    <string name="field_cannot_be_left_empty">Field cannot be left empty</string>
 </resources>

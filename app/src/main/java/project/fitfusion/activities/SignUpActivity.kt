@@ -1,12 +1,68 @@
 package project.fitfusion.activities
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import project.fitfusion.R
+import project.fitfusion.databinding.ActivitySignUpBinding
+import project.fitfusion.firebase.FirebaseAuthHelper
 
 class SignUpActivity : AppCompatActivity() {
+
+    private var binding: ActivitySignUpBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
+        setContentView(binding?.root)
+
+        binding?.flSignUp?.setOnClickListener {
+            if(!validateForm()) return@setOnClickListener
+
+            val email = binding?.etEmail?.text?.toString()
+            val password = binding?.etPassword?.text?.toString()
+
+            FirebaseAuthHelper(this@SignUpActivity).signUpUser(email!!, password!!)
+        }
+    }
+
+    private fun validateForm(): Boolean {
+        val nameIsEmpty = binding?.etName?.text?.isEmpty() == true
+        val emailIsEmpty = binding?.etEmail?.text?.isEmpty() == true
+        val passwordIsEmpty = binding?.etPassword?.text?.isEmpty() == true
+
+        if (nameIsEmpty || emailIsEmpty || passwordIsEmpty) {
+            Toast.makeText(
+                this@SignUpActivity,
+                getString(R.string.field_cannot_be_left_empty),
+                Toast.LENGTH_SHORT
+            ).show()
+            return false
+        }
+
+        return true
+    }
+
+
+    override fun onDestroy() {
+        binding = null
+        super.onDestroy()
+    }
+
+    fun signUpComplete() {
+        Toast.makeText(
+            this@SignUpActivity,
+            "Sign up successful!",
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
+    fun signUpFailure() {
+        Toast.makeText(
+            this@SignUpActivity,
+            "Sign up failed!",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 }
