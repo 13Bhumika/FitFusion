@@ -1,6 +1,7 @@
 package project.fitfusion.activities
 
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -16,6 +17,8 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding?.root)
+
+        setupToolBar()
 
         binding?.flSignUp?.setOnClickListener {
             if(!validateForm()) return@setOnClickListener
@@ -50,12 +53,21 @@ class SignUpActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
+    private fun setupToolBar() {
+        setSupportActionBar(binding?.tbSignUp)
+        binding?.tbSignUp?.setNavigationOnClickListener {
+            onBackPressed()
+        }
+    }
+
     fun signUpComplete() {
         Toast.makeText(
             this@SignUpActivity,
             "Sign up successful!",
             Toast.LENGTH_SHORT
         ).show()
+        startActivity(Intent(this@SignUpActivity, IntroActivity::class.java))
+        finish()
     }
 
     fun signUpFailure() {

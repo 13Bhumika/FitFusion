@@ -7,7 +7,7 @@
     android:background="@drawable/ic_sign_up_activity_background">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tb_sign_in"
+        android:id="@+id/tb_sign_up"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:title="Sign Up"
@@ -24,7 +24,7 @@
         android:textSize="@dimen/sign_up_enter_details_text_size"
         android:textColor="@color/white"
         android:padding="@dimen/sign_up_enter_details_text_padding"
-        app:layout_constraintTop_toBottomOf="@id/tb_sign_in"
+        app:layout_constraintTop_toBottomOf="@id/tb_sign_up"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
