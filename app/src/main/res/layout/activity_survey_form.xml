@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/variant3">
+    android:background="@drawable/ic_survey_form_background">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tb_personal_details"
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tb_personal_details"
-        android:text="Please enter your personal details"
+        android:text="@string/please_enter_your_personal_details"
         android:textSize="22sp"
         android:padding="15dp"
         android:textColor="@color/white" />
@@ -43,41 +43,73 @@
             android:orientation="vertical"
             android:padding="15dp" >
 
-            <EditText
-                android:id="@+id/et_gender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Gender"
-                android:textColorHint="@color/light_gray"
-                android:textColor="@color/black"
-                android:textSize="19sp"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender"
+                    android:textSize="19sp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:id="@+id/rb_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other"
+                    android:textColor="@color/black"/>
+
+            </RadioGroup>
 
             <EditText
                 android:id="@+id/et_age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Age"
+                android:hint="@string/age"
                 android:textColorHint="@color/light_gray"
                 android:textColor="@color/black"
-                android:textSize="19sp" />
+                android:textSize="19sp"
+                android:inputType="number"
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/et_height"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Height (in cm)"
+                android:hint="@string/height_in_cm"
                 android:textColorHint="@color/light_gray"
                 android:textColor="@color/black"
-                android:textSize="19sp"/>
+                android:textSize="19sp"
+                android:inputType="numberDecimal"
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/et_weight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Weight (in kg)"
+                android:hint="@string/weight_in_kg"
                 android:textColorHint="@color/light_gray"
                 android:textColor="@color/black"
-                android:textSize="19sp"/>
+                android:textSize="19sp"
+                android:inputType="numberDecimal"
+                android:importantForAutofill="no" />
 
             <FrameLayout
                 android:id="@+id/fl_submit"
@@ -91,9 +123,10 @@
                     android:id="@+id/et_submit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="SUBMIT"
+                    android:text="@string/submit"
                     android:textSize="16sp"
                     android:textStyle="bold"
+                    android:layout_marginTop="12dp"
                     android:gravity="center"
                     android:textColor="@color/white"/>
 

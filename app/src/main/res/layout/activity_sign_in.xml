@@ -70,7 +70,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/edit_text_sign_up_text_size"
                 android:inputType="textPassword"
-                />
+                android:autofillHints="password" />
 
             <FrameLayout
                 android:id="@+id/fl_sign_in"

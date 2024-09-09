@@ -21,7 +21,7 @@ class SurveyFormActivity : AppCompatActivity() {
         binding?.flSubmit?.setOnClickListener {
             if(!validateForm()) return@setOnClickListener
 
-            val gender = binding?.etGender?.text?.toString()
+            //val gender = binding?.etGender?.text?.toString()
             val age = binding?.etAge?.text?.toString()
             val height = binding?.etHeight?.text?.toString()
             val weight = binding?.etWeight?.text?.toString()
@@ -31,12 +31,12 @@ class SurveyFormActivity : AppCompatActivity() {
 
     }
     private fun validateForm(): Boolean{
-        val isGenderEmpty = binding?.etGender?.text?.isEmpty() == true
+        //val isGenderEmpty = binding?.etGender?.text?.isEmpty() == true
         val isAgeEmpty = binding?.etAge?.text?.isEmpty() == true
         val isHeightEmpty = binding?.etHeight?.text?.isEmpty() == true
         val isWeightEmpty = binding?.etWeight?.text?.isEmpty() == true
 
-        if( isGenderEmpty || isAgeEmpty || isHeightEmpty || isWeightEmpty){
+        if( isAgeEmpty || isHeightEmpty || isWeightEmpty){
             Toast.makeText(this@SurveyFormActivity,
                 "Field cannot be left empty",
                 Toast.LENGTH_SHORT).show()

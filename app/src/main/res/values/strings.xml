@@ -10,4 +10,13 @@
     <string name="password">Password</string>
     <string name="enter_details_sign_in">Please enter the following details to sign in</string>
     <string name="field_cannot_be_left_empty">Field cannot be left empty</string>
+    <string name="please_enter_your_personal_details">Please enter your personal details</string>
+    <string name="gender">Gender :</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="age">Age</string>
+    <string name="height_in_cm">Height (in cm)</string>
+    <string name="weight_in_kg">Weight (in kg)</string>
+    <string name="submit">SUBMIT</string>
 </resources>
