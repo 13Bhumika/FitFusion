@@ -70,9 +70,9 @@ class SurveyFormActivity : AppCompatActivity() {
             Toast.makeText(this@SurveyFormActivity,
                 "Field cannot be left empty",
                 Toast.LENGTH_SHORT).show()
-            return true
+            return false
         }
-        return false
+        return true
     }
     private fun setupToolbar() {
         setSupportActionBar(binding?.tbPersonalDetails)
