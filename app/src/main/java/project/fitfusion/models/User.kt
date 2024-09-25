@@ -1,4 +1,4 @@
-package project.fitfusion.activities
+package project.fitfusion.models
 
 import android.os.Parcel
 import android.os.Parcelable

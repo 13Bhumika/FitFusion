@@ -58,7 +58,7 @@ class SignInActivity: AppCompatActivity() {
             "Sign In successful!",
             Toast.LENGTH_SHORT).show()
 
-        startActivity(Intent(this@SignInActivity, SurveyFormActivity::class.java))
+        startActivity(Intent(this@SignInActivity, MainActivity::class.java))
         finish()
     }
     fun signInFailed(){

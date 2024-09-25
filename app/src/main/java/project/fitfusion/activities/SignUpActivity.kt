@@ -66,7 +66,7 @@ class SignUpActivity : AppCompatActivity() {
             "Sign up successful!",
             Toast.LENGTH_SHORT
         ).show()
-        startActivity(Intent(this@SignUpActivity, IntroActivity::class.java))
+        startActivity(Intent(this@SignUpActivity, SurveyFormActivity::class.java))
         finish()
     }
 

@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.google.firebase.firestore.auth.User
-import project.fitfusion.R
 import project.fitfusion.databinding.ActivitySurveyFormBinding
 import project.fitfusion.firebase.FirebaseAuthHelper
 import project.fitfusion.firebase.Firestore
@@ -31,7 +29,7 @@ class SurveyFormActivity : AppCompatActivity() {
         binding?.flSubmit?.setOnClickListener {
             if(validateForm()) {
                 setValues()
-                val user = User(
+                val user = project.fitfusion.models.User(
                     mUId,
                     mName,
                     mEmail,

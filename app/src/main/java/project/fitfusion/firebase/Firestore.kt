@@ -4,12 +4,12 @@ import android.content.Context
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import project.fitfusion.activities.SurveyFormActivity
-import project.fitfusion.activities.User
+import project.fitfusion.models.User
 
 open class Firestore {
     private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
 
-    fun storeUserInfo(context: Context, user:User){
+    fun storeUserInfo(context: Context, user: User){
         val userId= user.uId
         val userRef= db.collection("users").document(userId)
 
