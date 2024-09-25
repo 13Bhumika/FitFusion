@@ -49,4 +49,14 @@ class FirebaseAuthHelper(private val activity: Activity) {
                 }
             }
     }
+    fun currentUserUid(): String{
+        return auth.currentUser?.uid.toString()
+    }
+
+    fun currentUserName(): String{
+        return auth.currentUser?.displayName.toString()
+    }
+    fun currentUserEmail(): String{
+        return auth.currentUser?.email.toString()
+    }
 }
