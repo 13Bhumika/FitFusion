@@ -25,7 +25,7 @@ class SignInActivity: AppCompatActivity() {
             val email =binding?.etEmailSignIn?.text.toString()
             val password= binding?.etPasswordSignIn?.text.toString()
 
-            FirebaseAuthHelper(this@SignInActivity).signInUser(email!!, password!!)
+            FirebaseAuthHelper(this@SignInActivity).signInUser(this@SignInActivity, email!!, password!!)
 
         }
     }

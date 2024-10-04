@@ -1,9 +1,11 @@
 package project.fitfusion.activities
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import project.fitfusion.R
 import project.fitfusion.databinding.ActivitySignUpBinding
@@ -23,10 +25,11 @@ class SignUpActivity : AppCompatActivity() {
         binding?.flSignUp?.setOnClickListener {
             if(!validateForm()) return@setOnClickListener
 
+            val name = binding?.etName?.text?.toString()
             val email = binding?.etEmail?.text?.toString()
             val password = binding?.etPassword?.text?.toString()
 
-            FirebaseAuthHelper(this@SignUpActivity).signUpUser(email!!, password!!)
+            FirebaseAuthHelper(this@SignUpActivity).signUpUser(this@SignUpActivity,name!!, email!!, password!!)
         }
     }
 
@@ -52,7 +55,6 @@ class SignUpActivity : AppCompatActivity() {
         binding = null
         super.onDestroy()
     }
-
     private fun setupToolBar() {
         setSupportActionBar(binding?.tbSignUp)
         binding?.tbSignUp?.setNavigationOnClickListener {

@@ -7,6 +7,7 @@ import kotlinx.parcelize.Parcelize
 data class Food(
     val loggedBy: String,
     val date: String,
+    val timeStamp: String,
     val calories: Double,
     val carbohydrate: Double,
     val protein: Double,

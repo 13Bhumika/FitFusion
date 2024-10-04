@@ -3,6 +3,7 @@ package project.fitfusion.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import project.fitfusion.databinding.ActivityIntroBinding
 
 class IntroActivity : AppCompatActivity() {
@@ -27,5 +28,12 @@ class IntroActivity : AppCompatActivity() {
     override fun onDestroy() {
         binding = null
         super.onDestroy()
+    }
+
+    fun signInSuccess() {
+        Toast.makeText(this,"You have signed in.",Toast.LENGTH_SHORT).show()
+
+        val intent = Intent(this ,MainActivity::class.java)
+        startActivity(intent)
     }
 }
